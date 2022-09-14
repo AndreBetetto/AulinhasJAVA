@@ -141,41 +141,52 @@ class Lutador
 //UsaLutador.java
 class UsaLutador
 {
-    public static void main(String txt[])
-    {
-      Lutador l1,l2,l3;
-      l1=new Lutador();
-      l2=new Lutador("Pedro klaus","Canada",110,1.82,19,1,2,3);
-      l3= new Lutador("Bad _dog","EUA");
-      l3.setIdade(20);
+   public static void main(String txt[])
+   {
+     Lutador l1,l2,l3;
+     l1=new Lutador();
+     l2=new Lutador("Pedro klaus","Canada",110,1.82,19,1,2,3);
+     l3= new Lutador("Bad _dog","EUA");
+     l3.setIdade(20);
 
-      Scanner entrada = new Scanner(System.in);
-      System.out.println("Digite o nome do lutador: ");
-      String nome = entrada.nextLine();
-      System.out.println("Digite a nacionalidade do lutador: ");
-      String naci = entrada.nextLine();
-      System.out.println("Digite o peso do lutador: ");
-      double peso = entrada.nextDouble();
-      System.out.println("Digite a altura do lutador: ");
-      double altura = entrada.nextDouble();
-      System.out.println("Digite a idade do lutador: ");
-      int idade = entrada.nextInt();
-      System.out.println("Digite a quantidade de vitorias do lutador: ");
-      int vitoria = entrada.nextInt();
-      System.out.println("Digite a quantidade de derrotas do lutador: ");
-      int derrota = entrada.nextInt();
-      System.out.println("Digite a quantidade de empates do lutador: ");
-      int empate = entrada.nextInt();
+     Scanner entrada = new Scanner(System.in);
+     System.out.println("Digite o nome do lutador: ");
+     String nome = entrada.nextLine();
+     System.out.println("Digite a nacionalidade do lutador: ");
+     String naci = entrada.nextLine();
+     System.out.println("Digite o peso do lutador: ");
+     double peso = entrada.nextDouble();
+     System.out.println("Digite a altura do lutador: ");
+     double altura = entrada.nextDouble();
+     System.out.println("Digite a idade do lutador: ");
+     int idade = entrada.nextInt();
+     System.out.println("Digite a quantidade de vitorias do lutador: ");
+     int vitoria = entrada.nextInt();
+     System.out.println("Digite a quantidade de derrotas do lutador: ");
+     int derrota = entrada.nextInt();
+     System.out.println("Digite a quantidade de empates do lutador: ");
+     int empate = entrada.nextInt();
+     
+      l1.setNome(nome);
+      l1.setNacionalidade(naci);
+      l1.setPeso(peso);
+      l1.setAltura(altura);
+      l1.setIdade(idade);
+      l1.setVitoria(vitoria);
+      l1.setDerrota(derrota);
+      l1.setEmpate(empate);
       
-      System.out.println("Nome: "+l1.getNome());
-      System.out.println("Nacionalidade: "+l1.getNacionalidade());
-      System.out.println("Peso: "+l1.getPeso());
-      System.out.println("Altura: "+l1.getAltura());  
-      System.out.println("Idade: "+l1.getIdade());
-      System.out.println("Vitorias: "+l1.getVitoria());
-      System.out.println("Derrotas: "+l1.getDerrota());
-      System.out.println("Empates: "+l1.getEmpate());
 
-    }
+     System.out.println("Nome: "+l1.getNome());
+     System.out.println("Nacionalidade: "+l1.getNacionalidade());
+     System.out.println("Peso: "+l1.getPeso());
+     System.out.println("Altura: "+l1.getAltura());  
+     System.out.println("Idade: "+l1.getIdade());
+     System.out.println("Vitorias: "+l1.getVitoria());
+     System.out.println("Derrotas: "+l1.getDerrota());
+     System.out.println("Empates: "+l1.getEmpate());
+
+   }
     
 }
+
