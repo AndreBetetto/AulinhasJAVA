@@ -42,15 +42,39 @@ class Lutador
    public void setPeso(double p)
    {  
       peso = p; 
+        if(peso<52)this.peso=52;
+        if(peso>120)this.peso=120;
+        setCategoria();
+      
    }
+
+   public void setCategoria()
+   {  
+      if(peso<=70)
+          categoria="Pena";
+        else if(peso<=90)
+          categoria="Leve";
+        else if(peso<=120)
+          categoria="Pesado";
+   }
+
+   public String getCategoria()
+   {  
+      return this.categoria; 
+   }
+
    public double getPeso()
    {  
       return this.peso; 
+      
    }
 
    public void setAltura(double a)
    {  
       altura = a; 
+      if(altura<1.5)this.altura=1.5;
+      if(altura>2.5)this.altura=2.5;
+      
    }
    public double getAltura()
    {  
@@ -60,6 +84,8 @@ class Lutador
    public void setIdade(int i)
    {  
       idade = i; 
+      if(idade<18)this.idade=18;
+      if(idade>45)this.idade=45;
    }
    public int getIdade()
    {  
@@ -176,7 +202,6 @@ class UsaLutador
       l1.setDerrota(derrota);
       l1.setEmpate(empate);
       
-
      System.out.println("Nome: "+l1.getNome());
      System.out.println("Nacionalidade: "+l1.getNacionalidade());
      System.out.println("Peso: "+l1.getPeso());
@@ -185,6 +210,7 @@ class UsaLutador
      System.out.println("Vitorias: "+l1.getVitoria());
      System.out.println("Derrotas: "+l1.getDerrota());
      System.out.println("Empates: "+l1.getEmpate());
+     System.out.println("Categoria: "+l1.getCategoria());
 
    }
     
