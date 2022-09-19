@@ -1,35 +1,34 @@
-class Tabuada
-{
-private int conta,result;
-Pegaint vt; //valortabuada- agregacao de objeto Pegaint
-Tabuada()
-{
-.........................=new Pegaint();
-}
-Tabuada(int x)
-{
-...........................=new Pegaint();
-__________.setValor(x);
-}
-public void AlteraValor(...............................)
-{
+class tabuada {
+    private int conta, result;
+    pegaInt vt; // valortabuada- agregacao de objeto Pegaint
 
-_________.setValor(...........................);
-}
-public ................PegaValor()
-{
-return ________________.getValor();
-}
-public void Mostra()
-{
-System.out.println(&quot;\n Tabuada do numero=&quot;+................................);
-for(conta=0; conta&lt;=10; conta++)
-{ result=conta*...............................;
-System.out.println(conta+&quot;x&quot;+................................+&quot;=&quot;+result);
-}
-}
-public void Digita()
-{
-_____________.DigitaValor(0,100);
-}
+    tabuada() {
+        vt = new pegaInt();
+    }
+
+    tabuada(int x) {
+        vt = new pegaInt();
+        vt.setValor(x);
+    }
+
+    public void AlteraValor(int valor) {
+        vt.setValor(valor);
+    }
+
+    public int PegaValor() {
+        return vt.getvalor();
+    }
+
+    public void Mostra() {
+        System.out.println("\n Tabuada do numero=" + vt);
+        for (conta = 0; conta <= 10; conta++) {
+            result = conta * PegaValor();
+            System.out.println(conta + " x " + PegaValor() + " = " + result);
+        }
+    }
+
+    public void Digita() {
+
+        vt.digitaValor(0, 100);
+    }
 }

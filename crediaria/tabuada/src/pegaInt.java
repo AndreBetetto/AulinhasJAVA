@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.function.Function;
 
 class pegaInt {
     private int valor;
@@ -10,6 +9,7 @@ class pegaInt {
     public void setValor(int valor) {
         this.valor = valor;
     }
+
     public int getvalor(){
         return valor;
     }
