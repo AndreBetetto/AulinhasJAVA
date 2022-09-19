@@ -6,4 +6,4 @@ public static void main(String t[])
         t1=new tabuada(); t1.Digita(); t1.Mostra();
         t2=new tabuada(5); t2.Mostra();
     }//main
-}//class
+}//class11

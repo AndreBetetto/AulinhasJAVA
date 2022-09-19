@@ -4,26 +4,30 @@ class pegaInt {
     private int valor;
     Scanner teclado;
     pegaInt() {
-        setValor(teclado.nextInt());
+        setValor(valor);
     }
     public void setValor(int valor) {
         this.valor = valor;
     }
 
-    public int getvalor(){
+    public int getvalor() {
         return valor;
     }
-    public void digitaValor(int nmax, int nmin) {
+
+    public void digitaValor(int nmin, int nmax) {
         teclado = new Scanner(System.in);
-        while (true) {
+        while(true) {
             System.out.println("Digite um valor entre " + nmin + " e " + nmax + ": ");
             try {
-                this.valor=teclado.nextInt(); 
-                if (this.valor >= nmin && this.valor <= nmax)
+                    this.valor=teclado.nextInt(); 
+                    if (this.valor >= nmin && this.valor <= nmax) {
                     break;
-                 }catch(Exception erro) {
-                    System.out.println("Valor inválido!");
-                    teclado.next();
+                    } else {
+                        throw new Exception(); // força a execução do catch
+                    }
+                 } catch(Exception erro) {
+                    System.out.println("Valor inválido! ");
+                    //teclado.next(); --> Desnecessário... Pois após o erro, o programa deve voltar ao início do loop, ao invés de continuar a execução.
                 }
                 
              }

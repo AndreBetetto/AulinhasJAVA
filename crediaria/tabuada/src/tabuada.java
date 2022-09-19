@@ -1,26 +1,26 @@
 class tabuada {
     private int conta, result;
-    pegaInt vt; // valortabuada- agregacao de objeto Pegaint
+    pegaInt valor; // valortabuada- agregacao de objeto Pegaint
 
     tabuada() {
-        vt = new pegaInt();
+        valor = new pegaInt();
     }
 
     tabuada(int x) {
-        vt = new pegaInt();
-        vt.setValor(x);
+        valor = new pegaInt();
+        valor.setValor(x);
     }
 
-    public void AlteraValor(int valor) {
-        vt.setValor(valor);
+    public void AlteraValor(int x) {
+        valor.setValor(x);
     }
 
     public int PegaValor() {
-        return vt.getvalor();
+        return valor.getvalor();
     }
 
     public void Mostra() {
-        System.out.println("\n Tabuada do numero=" + vt);
+        System.out.println("\n Tabuada do numero = " + valor.getvalor());
         for (conta = 0; conta <= 10; conta++) {
             result = conta * PegaValor();
             System.out.println(conta + " x " + PegaValor() + " = " + result);
@@ -29,6 +29,6 @@ class tabuada {
 
     public void Digita() {
 
-        vt.digitaValor(0, 100);
+        valor.digitaValor(0, 100);
     }
 }
