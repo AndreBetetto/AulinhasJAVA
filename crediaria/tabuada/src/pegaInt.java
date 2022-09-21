@@ -25,9 +25,11 @@ class pegaInt {
                     } else {
                         throw new Exception(); // força a execução do catch
                     }
+
                  } catch(Exception erro) {
                     System.out.println("Valor inválido! ");
-                    //teclado.next(); --> Desnecessário... Pois após o erro, o programa deve voltar ao início do loop, ao invés de continuar a execução.
+                    //teclado.next(); ERRADOO //--> Desnecessário... Pois após o erro, o programa deve voltar ao início do loop, ao invés de continuar a execução.
+                    teclado.nextLine(); // limpa o buffer do teclado
                 }
                 
              }
